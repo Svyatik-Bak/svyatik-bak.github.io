@@ -27,7 +27,7 @@ int wmain(int argc, wchar_t *argv[])
 Назва функції wmain тут не просто так, все це зроблено так, тому що другий аргумент функції це "wchar_t",
 а у звичайній функції main аргумент має бути типу "char", але нам потрібен саме wchar_t, інакше буде попередження
 
-```warning: passing argument 1 of 'PlaySoundW' від некомпактного типу pointer [-Wincompatible-pointer-types]```
+```warning: passing argument 1 of 'PlaySoundW' from incompatible pointer type [-Wincompatible-pointer-types]```
 А виникає воно через те, що "char" це ASCII, а метод "PlaySoundW" використовує UNICODE, якщо ви все-таки хочете використовувати ASCII
 то потрібно цей метод замінити на "PlaySoundA". Якщо у вас виникли проблеми з компілюванням, то спробуйте додати аргумент ```-municode```
 якщо ви використовуєте MinGW.
