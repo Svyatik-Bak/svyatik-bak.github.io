@@ -1,0 +1,204 @@
+How to install Arch Linux
+     Svyatik Bak
+
+1. Connecting to internet (Wi-Fi)
+-----------------------------------
+iwctl station wlan0 connect <SSID>
+----------------------------------
+2. Partitioning
+-------------------------------
+You can use something like cfdisk or fdisk
+-------------------------------
+
+UEFI/GPT:
+
+|------|-----------------|-----------|---------------------|
+|Number|Type             |Filesystem |Mount point          |
+|------|-----------------|-----------|---------------------|
+|1     |EFI System (1)   |FAT -F32   |/boot/efi (in chroot)|
+|------|-----------------|-----------|---------------------|
+|2     |Linux swap (19)  |swap       |[SWAP]               |
+|------|-----------------|-----------|---------------------|
+|3     |Linux filesystem |ext4       |/mnt                 |
+|------|-----------------|-----------|---------------------|
+
+Formating partitions:
+-------------------------------
+mkfs.fat -F32 /dev/efi_partiton
+mkswap /dev/swap_partiton
+mkfs.ext4 /dev/root_partiton
+-------------------------------
+
+Mounting partitions:
+-------------------------------
+Note: we will mount EFI Partition later
+-------------------------------
+swapon /dev/swap_partiton
+mount /dev/root_partition /mnt
+-------------------------------
+
+BIOS/MBR:
+
+|------|-------------------------|-----|---------------------|
+|Number|Type                     |FS   |Mount point          |
+|------|-------------------------|-----|---------------------|
+|1     |Linux swap/Solaris (82)  |swap |[SWAP]               |
+|------|-------------------------|-----|---------------------|
+|2     |Linux                    |ext4 |/mnt                 |
+|------|-------------------------|-----|---------------------|
+
+Formating partitions:
+--------------------------
+mkswap /dev/swap_partiton
+mkfs.ext4 /dev/root_partiton
+--------------------------
+Mounting partitions:
+--------------------------
+swapon /dev/swap_partiton
+mount /dev/root_partition /mnt
+-------------------------
+ 
+3. Installing base system
+
+Update keyring:
+-------------------------------
+pacman -Sy archlinux-keyring
+-------------------------------
+Install base system:
+-------------------------------
+pacstrap -K /mnt base linux linux-firmware
+-------------------------------
+ 
+4. Setting up system
+
+Generating fstab:
+-------------------------------
+genfstab -U /mnt >> /mnt/etc/fstab
+-------------------------------
+Changing root to our system:
+-------------------------------
+arch-chroot /mnt
+-------------------------------
+ 
+Setting up clock:
+-------------------------------
+ln -sf /usr/share/zoneinfo/Europe/Kyiv /etc/localtime
+hwclock —systohc
+-------------------------------
+ 
+Installing text editor:
+-------------------------------
+pacman -S micro
+-------------------------------
+ 
+-------------------------------
+Generating locales:
+-------------------------------
+uncomment ``en_US.UTF-8 UTF-8`` or anything you need
+-------------------------------
+micro /etc/locale.gen
+locale-gen
+-------------------------------
+ 
+
+Setting up network:
+-------------------------------
+Note: hostname is a computer name
+-------------------------------
+micro /etc/hostname
+micro /etc/hosts
+-------------------------------
+ /etc/hosts:
+
+127.0.0.1   localhost
+
+::1         localhost
+
+127.0.1.1   <hostname>
+-------------------------------
+ 
+Installing NetworkManager:
+-------------------------------
+pacman -S networkmanager
+systemctl enable NetworkManager
+-------------------------------
+
+Setting up sudo:
+-------------------------------
+pacman -S sudo
+EDITOR=micro visudo
+-------------------------------
+uncomment ``%wheel ALL=(ALL:ALL) ALL``
+-------------------------------
+
+Setting up users:
+-------------------------------
+useradd -m <username>
+usermod -aG wheel,video,audio,storage,floppy <username>
+passwd
+passwd <username>
+-------------------------------
+ 
+5. Installing GNU GRUB boot loader
+
+UEFI/GPT:
+-------------------------------
+pacman -S efibootmgr grub
+mount --mkdir /dev/efi_partition /boot/efi
+grub-install --efi-directory=/boot/efi
+grub-mkconfig -o /boot/grub/grub.cfg
+-------------------------------
+
+BIOS/MBR:
+-------------------------------
+pacman -S grub
+grub-install /dev/sdX
+grub-mkconfig -o /boot/grub/grub.cfg
+-------------------------------
+6. Rebooting to system
+-------------------------------
+Exit chroot: exit
+-------------------------------
+Reboot: reboot
+-------------------------------
+Enjoy :)
+-------------------------------
+
+7. Installing Desktop Envoriment
+-------------------------------
+
+GNOME:
+Installing desktop envoriment:
+-------------------------------
+sudo pacman -S gnome
+sudo systemctl enable gdm; sudo reboot
+-------------------------------
+Recomended packages:
+gnome-tweaks adw-gtk3AUR gnome-browser-connectorAUR
+-------------------------------
+
+Xfce:
+Installing desktop envoriment:
+sudo pacman -S xfce4 xfce4-goodies
+-------------------------------
+Installing login manager:
+-------------------------------
+sudo pacman -S lightdm-gtk-greeter
+sudo systemctl enable lightdm; sudo reboot
+-------------------------------
+Recomended packages:
+gvfs gvfs-mtp pipewire-pulse pipewire-alsa pavucontrol network-manager-applet blueman accountsservice
+-------------------------------
+ 
+
+KDE Plasma:
+-------------------------------
+Installing desktop envoriment:
+-------------------------------
+sudo pacman -S plasma plasma-wayland-session konsole
+sudo systemctl enable sddm; sudo reboot now
+-------------------------------
+Installing KDE Applications (Optional):
+-------------------------------
+sudo pacman -S kde-applications
+-------------------------------
