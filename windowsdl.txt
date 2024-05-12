@@ -1,0 +1,62 @@
+Обычные Windows NT:
+Windows 11: https://www.microsoft.com/en-us/software-download/windows11
+Windows 10: https://www.microsoft.com/en-us/software-download/windows10
+Windows 8.1: https://www.microsoft.com/en-us/software-download/windows8iso
+Windows 7 with Service Pack 1 EN: https://rutracker.org/forum/viewtopic.php?t=5121311
+Windows 7 with Service Pack 1 RU: https://rutracker.org/forum/viewtopic.php?t=4529698
+Windows Vista with Service Pack 2 RU: https://rutracker.org/forum/viewtopic.php?t=3096576
+Windows Vista with Service Pack 2 EN: https://rutracker.org/forum/viewtopic.php?t=3543471
+Windows XP Professional SP3 VL: https://rutracker.org/forum/viewtopic.php?t=4461985
+Windows XP old-dos: http://old-dos.ru/index.php?do=show&id=4404&page=files
+Windows XP x64 old-dos: http://old-dos.ru/index.php?page=files&mode=files&do=show&id=5352
+Windows XP x64: https://archive.org/details/en_win_xp_pro_x64_with_sp2_vl_x13-41611_202105
+Windows 2000 WinWorldPC: https://winworldpc.com/product/windows-nt-2000/final
+Windows 2000 old-dos: http://old-dos.ru/index.php?do=show&id=3019&page=files 
+
+Embedded, Enterprise, LTSC, Server, редкие редации:
+Windows 11 Enterprise Evalution: https://www.microsoft.com/ru-ru/evalcenter/download-windows-11-enterprise
+Windows 10 Enterprise/LTSC Evalution: https://www.microsoft.com/ru-ru/evalcenter/download-windows-10-enterprise
+Windows 10 Enterprise LTSC 64bit: https://archive.org/details/en-us_windows_10_enterprise_ltsc_2021_x64_dvd_d289cf96_202112
+Windows 10 Enterprise LTSC 32bit: https://archive.org/details/en-us_windows_10_enterprise_ltsc_2021_x86_dvd_9f4aa95f
+Windows Embedded 8.1 Industry Pro: https://www.microsoft.com/ru-ru/download/details.aspx?id=40745
+Windows Embedded 8.1 Industry Enterprise with Update 3 x64: https://archive.org/details/en_windows_embedded_8.1_industry_enterprise_with_update_x64_dvd_6052160
+Windows Embedded 8.1 Industry Enterprise with Update 3 x86: https://archive.org/details/en_windows_embedded_8.1_industry_enterprise_with_update_x86_dvd_6052252
+Windows Embedded 8.1 Industry Pro with Update 3 x64: https://archive.org/details/en_windows_embedded_8.1_industry_pro_with_update_x64_dvd_6052086_202107
+Windows Embedded 8.1 Industry Pro with Update 3 x86: https://archive.org/details/en_windows_embedded_8.1_industry_pro_with_update_x86_dvd_6052123
+Windows 8.0 Enterprise: https://rutracker.org/forum/viewtopic.php?t=4469417
+Windows 7 (без Service Pack 1): https://rutracker.org/forum/viewtopic.php?t=5093115
+Windows Thin PC: https://archive.org/details/en_windows_thin_pc_x86_697681 
+Windows Embedded Standard 7 SP1 x64 Runtime: https://archive.org/details/en_windows_embedded_standard_7_sp1_runtime_x64_dvd_651894
+Windows Embedded Standard 7 SP1 x86 Runtime: https://archive.org/details/en_windows_embedded_standard_7_sp1_runtime_x86_dvd_651894
+Windows Embedded Standard 7 Service Pack 1 for Multilingual User Interface Pack x64: https://archive.org/details/en_windows_embedded_standard_7_sp1_for_mui_x64_dvd_669676
+Windows Embedded Standard 7 Service Pack 1 for Multilingual User Interface Pack x86: https://archive.org/details/en_windows_embedded_standard_7_sp1_for_mui_x86_dvd_669659
+
+Windows 9x:
+Windows ME WinWorldPC: https://winworldpc.com/product/windows-me/final
+Windows ME old-dos: http://old-dos.ru/index.php?page=files&mode=files&do=show&id=1429
+Windows 98 WinWorldPC: https://winworldpc.com/product/windows-98/98-second-edition
+Windows 98 old-dos: http://old-dos.ru/files/file_793.html
+Windows 95 WinWorldPC: https://winworldpc.com/product/windows-95/osr-2
+Windows 95 old-dos: http://old-dos.ru/files/file_76.html
+Windows 95 OSR2 old-dos: http://old-dos.ru/index.php?page=files&mode=files&do=show&id=3296
+Windows 3x, 2x, 1.0x:
+Windows 3.0 / 3.1: https://winworldpc.com/product/windows-3/31
+Windows 2x: https://winworldpc.com/product/windows-20/20
+Windows 1.0x: https://winworldpc.com/product/windows-10/101
+
+MS-DOS:
+7.x: https://winworldpc.com/product/ms-dos/7x
+6.22: https://winworldpc.com/product/ms-dos/622
+6.21: https://winworldpc.com/product/ms-dos/621
+6.20: https://winworldpc.com/product/ms-dos/620
+6.0: https://winworldpc.com/product/ms-dos/6x
+5.0: https://winworldpc.com/product/ms-dos/50
+4.0x: https://winworldpc.com/product/ms-dos/4x
+3.31: https://winworldpc.com/product/ms-dos/331
+3.30: https://winworldpc.com/product/ms-dos/3x
+3.21: https://winworldpc.com/product/ms-dos/321
+3.20: https://winworldpc.com/product/ms-dos/320
+3.10: https://winworldpc.com/product/ms-dos/310
+3.00: https://winworldpc.com/product/ms-dos/30
+2.x: https://winworldpc.com/product/ms-dos/2x
+1.x: https://winworldpc.com/product/ms-dos/1x
